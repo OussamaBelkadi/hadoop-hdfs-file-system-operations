@@ -1,0 +1,83 @@
+# TP1: HDFS File System Manipulation
+
+This project contains the commands and scripts needed to perform a set of operations on the Hadoop Distributed File System (HDFS).
+
+## Description
+
+This practical work covers basic HDFS operations:
+- Creating a directory structure
+- Creating and manipulating files
+- Copying files from the local system to HDFS
+- Deleting and renaming files
+- Recursively exploring content
+
+## Prerequisites
+
+- Docker and Docker Compose
+- Apache Hadoop Docker image: `apache/hadoop:3.3.6`
+
+## Cluster Configuration
+
+The project uses Docker Compose to deploy a complete Hadoop cluster including:
+- 1 namenode
+- 5 datanodes
+- 1 resourcemanager
+- 1 nodemanager
+
+## Quick Start
+
+1. Clone this repository
+```bash
+git clone <repository_URL>
+cd hadoop-hdfs-tp1
+```
+
+2. Launch the cluster
+```bash
+docker-compose up -d
+```
+
+3. Execute HDFS commands
+```bash
+docker exec -it namenode bash /opt/script/hdfs_tp.sh
+```
+
+4. Access the HDFS web interface
+```
+http://localhost:9870
+```
+
+## Practical Work Content
+
+The practical work includes the following operations:
+1. Creating a directory structure
+2. Creating and manipulating files
+3. Displaying file contents
+4. Copying files between HDFS directories
+5. Renaming and deleting files
+6. Transferring files from the local system to HDFS
+7. Recursively exploring the directory structure
+8. Deleting directories
+
+## Project Structure
+
+```
+hadoop-hdfs/
+├── docker-compose.yml
+├── configuration/
+│   └── config
+├── image/
+│   └── image.pmg
+├── scripts/
+│   └── hdfs_tp.sh
+└── README.md
+```
+
+# Overview
+
+![Hadoop Image 1](images/image(1).png)
+![Hadoop Image 2](images/image(2).png)
+![Hadoop Image 3](images/image(3).png)
+![Hadoop Image 4](images/image(5).png)
+![Hadoop Image 5](images/image(6).png)
+![Hadoop Image 6](images/image.png)
